@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { io } from "socket.io-client";
 import CharacterList from "../components/characterList";
 const Home = () => {
+  useEffect(() => {
+    const x = io("http://localhost:3001/");
+    x.on("get-data", (x) => setData(x));
+  });
+  const [data, setData] = useState([]);
   return (
     <>
-      charlist
-      <CharacterList r={[{ class: 1, spec: 1, id: 1, name: "eok" }]} />
+      s <CharacterList r={data} />
     </>
   );
 };

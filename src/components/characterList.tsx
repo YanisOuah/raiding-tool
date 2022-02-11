@@ -23,7 +23,6 @@ export default function CharacterList(props: { r: character[] }) {
 
   return (
     <div style={{ display: "inline-flex" }}>
-      1
       {classes.map((c: any) => (
         <RosterDiv key={c.id}>
           {props.r
