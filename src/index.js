@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
 
 const Nav = styled.nav`
   height: 5%;
@@ -14,6 +15,7 @@ const Nav = styled.nav`
     text-decoration: underline;
   }
 `;
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -22,7 +24,7 @@ ReactDOM.render(
         <Link to="/other">Other</Link>
       </Nav>
       <Routes>
-        <Route path="/" element={<p>home</p>} />
+        <Route path="/" element={<Home />} />
         <Route path="/other" element={<p>other</p>} />
       </Routes>
     </Router>
