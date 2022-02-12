@@ -1,5 +1,5 @@
 import CatFacts from "../components/dragndrop/CatFacts";
-import BookTitles from "../components/dragndrop/BookTitles";
+import RandomUsers from "../components/dragndrop/RandomUsers";
 
 const DragPage = () => {
   return (
@@ -7,7 +7,7 @@ const DragPage = () => {
       <h3>swappable list</h3>
       <CatFacts />
       <h3>swappable list with complex objects </h3>
-      <BookTitles />
+      <RandomUsers />
     </>
   );
 };

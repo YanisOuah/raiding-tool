@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import CharacterList from "../components/characterList";
-const Home = () => {
+const HomePage = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const x = io("http://localhost:3001/");
@@ -13,4 +13,4 @@ const Home = () => {
     </>
   );
 };
-export default Home;
+export default HomePage;

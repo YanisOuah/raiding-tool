@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 const RandomUsers = () => {
   const [users, setUsers] = useState<any[]>([]);
   const [VIPUser, setVIPUser] = useState<any>();
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     fetch("https://randomuser.me/api/?results=8")
       .then((res) => res.json())
       .then((data) => setUsers(data.results));
   }, []);
-  console.log(VIPUser);
 
   const [dragInfo, setDragInfo] = useState({
     data: [],
@@ -53,6 +53,20 @@ const RandomUsers = () => {
   };
   return (
     <>
+      <button
+        onClick={() => {
+          setIsLoading(true);
+          fetch("https://randomuser.me/api/?results=8")
+            .then((res) => res.json())
+            .then((data) => {
+              setUsers(data.results);
+              setIsLoading(false);
+            });
+        }}
+        disabled={isLoading}
+      >
+        refresh
+      </button>
       <ul className="dnd" style={{ display: "flex", flexDirection: "column" }}>
         {users &&
           users.map((item, index) => (
