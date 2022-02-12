@@ -19,8 +19,6 @@ const RosterDiv = styled.div`
   }
 `;
 export default function CharacterList(props: { r: character[] }) {
-  console.log(classes);
-
   return (
     <div style={{ display: "inline-flex" }}>
       {classes.map((c: any) => (

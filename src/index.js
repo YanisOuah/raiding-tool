@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
+import DragPage from "./pages/Drag";
 
 const Nav = styled.nav`
   height: 5%;
@@ -21,11 +22,11 @@ ReactDOM.render(
     <Router>
       <Nav>
         <Link to="/">Home</Link>
-        <Link to="/other">Other</Link>
+        <Link to="/drag">DragNDrop</Link>
       </Nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/other" element={<p>other</p>} />
+        <Route path="/drag" element={<DragPage />} />
       </Routes>
     </Router>
   </React.StrictMode>,
