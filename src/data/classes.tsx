@@ -44,7 +44,7 @@ import arms from "../img/class/warrior/arms.png";
 import fury from "../img/class/warrior/fury.png";
 import protectionWarrior from "../img/class/warrior/protection.png";
 
-const x = [
+const raidclasses = [
   {
     id: 0,
     title: "Druid",
@@ -147,4 +147,4 @@ const x = [
     color: "#C69B6Db0",
   },
 ];
-export default x;
+export default raidclasses;
